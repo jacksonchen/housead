@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="index.css" rel="stylesheet" type="text/css" />
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+<script type="text/javascript" src="index.js"></script>
+<title>Boulder House for Sale</title>
+</head>
+
+<body onLoad="switchImage('slideImg')">
+<div class="fixedElement">Hi</div>
+<img name="slideImg" src="house1.jpg" width=500 height=375 border=0>
+<div id="next" onClick="switchImage('slideImg')"></div>
+<a href="#" onClick="clearTimeout(timerID)"> pause</a>
+<a href="#" onClick="prevImage('slideImg'); clearTimeout(timerID)"> previous</a>
+<a href="#" onClick="switchImage('slideImg'); clearTimeout(timerID)">next </a>
+</body>
+</html>
