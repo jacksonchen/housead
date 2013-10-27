@@ -12,7 +12,7 @@
     height:25px;
     position:absolute;
     display: block;
-    background: url("next.jpg") 0px 0px ;
+    background: url("img/next.jpg") 0px 0px ;
 }
 
 #next:hover {
@@ -21,7 +21,7 @@
     height:25px;
     position:absolute;
     display: block;
-    background: url("nexthover.jpg") 0px 0px ;
+    background: url("img/nexthover.jpg") 0px 0px ;
 }
 
 #previous {
@@ -30,7 +30,7 @@
     height:25px;
     position:absolute;
     display: block;
-    background: url("back.jpg") 0px 0px ;
+    background: url("img/back.jpg") 0px 0px ;
 }
 
 #previous:hover {
@@ -39,7 +39,7 @@
     height:25px;
     position:absolute;
     display: block;
-    background: url("backhover.jpg") 0px 0px ;
+    background: url("img/backhover.jpg") 0px 0px ;
 }
 
 #pause {
@@ -48,7 +48,7 @@
     height:25px;
     position:absolute;
     display: block;
-    background: url("pause.jpg") 0px 0px ;
+    background: url("img/pause.jpg") 0px 0px ;
 }
 
 #pause:hover {
@@ -57,5 +57,5 @@
     height:25px;
     position:absolute;
     display: block;
-    background: url("pausehover.jpg") 0px 0px ;
+    background: url("img/pausehover.jpg") 0px 0px ;
 }
