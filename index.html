@@ -12,9 +12,8 @@
 <body onLoad="switchImage('slideImg')">
 <div class="fixedElement">Hi</div>
 <img name="slideImg" src="house1.jpg" width=500 height=375 border=0>
-<div id="next" onClick="switchImage('slideImg')"></div>
-<a href="#" onClick="clearTimeout(timerID)"> pause</a>
-<a href="#" onClick="prevImage('slideImg'); clearTimeout(timerID)"> previous</a>
-<a href="#" onClick="switchImage('slideImg'); clearTimeout(timerID)">next </a>
+<div id="next" onClick="switchImage('slideImg'); clearTimeout(timerID)"></div>
+<div id="pause" onClick="clearTimeout(timerID)"></div>
+<div id="previous" onClick="prevImage('slideImg'); clearTimeout(timerID)"></div>
 </body>
 </html>

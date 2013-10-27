@@ -7,10 +7,55 @@
 }
 
 #next {
-    width: 25px;   
-    left:0px;
+    width: 30px;   
+    left:150px;
     height:25px;
     position:absolute;
     display: block;
-    background: url("http://i43.tinypic.com/25alqv7.png") 0px 0px ;
+    background: url("next.jpg") 0px 0px ;
+}
+
+#next:hover {
+    width: 30px;   
+    left:150px;
+    height:25px;
+    position:absolute;
+    display: block;
+    background: url("nexthover.jpg") 0px 0px ;
+}
+
+#previous {
+    width: 30px;   
+    left:50px;
+    height:25px;
+    position:absolute;
+    display: block;
+    background: url("back.jpg") 0px 0px ;
+}
+
+#previous:hover {
+    width: 30px;   
+    left:50px;
+    height:25px;
+    position:absolute;
+    display: block;
+    background: url("backhover.jpg") 0px 0px ;
+}
+
+#pause {
+    width: 30px;   
+    left:100px;
+    height:25px;
+    position:absolute;
+    display: block;
+    background: url("pause.jpg") 0px 0px ;
+}
+
+#pause:hover {
+    width: 30px;   
+    left:100px;
+    height:25px;
+    position:absolute;
+    display: block;
+    background: url("pausehover.jpg") 0px 0px ;
 }
