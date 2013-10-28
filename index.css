@@ -92,7 +92,7 @@ margin-left:15px;
 #rightcol {
 	position:absolute;
 	left:40%;
-	width:50%;
+	width:60%;
 }
 
 h2 {
@@ -101,4 +101,8 @@ h2 {
 
 ul {
 	list-style-type: none;
+}
+
+.verticalLine {
+    border-left: thick solid #ff0000;
 }
