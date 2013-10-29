@@ -15,6 +15,10 @@ body {
 	font-size:20px;
 }
 
+.fixedElement:hover {
+	background-color: #999999;
+}
+
 a {
 	text-decoration:none;
 	color:#000000;
@@ -23,12 +27,6 @@ a {
 #buynow {
 	float:right;
 	margin-right:20px;
-}
-
-#buynow:hover {
-	float:right;
-	margin-right:20px;
-	background-color:#999999;
 }
 
 #next {
