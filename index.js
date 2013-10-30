@@ -9,11 +9,11 @@ var interval = 4500;
 var random_display=0;
 var imageNum=0;
 imageArray=new Array();
-imageArray[imageNum++]=new imageItem("img/" + "house" + "1.jpg");
-imageArray[imageNum++]=new imageItem("img/" + "house" + "2.jpg");
-imageArray[imageNum++]=new imageItem("img/" + "house" + "3.jpg");
-imageArray[imageNum++]=new imageItem("img/" + "house" + "4.jpg");
-imageArray[imageNum++]=new imageItem("img/" + "house" + "5.jpg");
+imageArray[imageNum++]=new imageItem("img/house1.jpg");
+imageArray[imageNum++]=new imageItem("img/house4.jpg");
+imageArray[imageNum++]=new imageItem("img/house2.jpg");
+imageArray[imageNum++]=new imageItem("img/house3.jpg");
+imageArray[imageNum++]=new imageItem("img/house5.jpg");
 
 function imageItem(image_location) {
 	this.image_item=new Image();
