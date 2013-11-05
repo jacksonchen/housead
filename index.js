@@ -54,7 +54,6 @@ function prevImage(place) {
 }
 
 function switchImage(place) {
-    console.log(place);
     var new_image = getNextImage();
     doTransition(new_image,place);
     var recur_call = "switchImage('"+place+"')";
