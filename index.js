@@ -1,9 +1,15 @@
+var imageArray;
+var interval = 4500;
+var random_display=0;
+var imageNum=0;
+var totalImages;
 $(window).scroll(function(e){ 
   $el = $('.fixedElement'); 
   if ($(this).scrollTop() > 200 && $el.css('position') != 'fixed'){ 
     $('.fixedElement').css({'position': 'fixed', 'top': '0px'}); 
   } 
 });
+<<<<<<< HEAD
 
 var interval = 4500;
 var random_display=0;
@@ -14,20 +20,30 @@ imageArray[imageNum++]=new imageItem("img/house4.jpg");
 imageArray[imageNum++]=new imageItem("img/house2.jpg");
 imageArray[imageNum++]=new imageItem("img/house3.jpg");
 imageArray[imageNum++]=new imageItem("img/house5.jpg");
+=======
+$(document).ready(function() {
+    imageArray=[];
+    imageArray[imageNum++]=new imageItem("img/" + "house" + "1.jpg");
+    imageArray[imageNum++]=new imageItem("img/" + "house" + "2.jpg");
+    imageArray[imageNum++]=new imageItem("img/" + "house" + "3.jpg");
+    imageArray[imageNum++]=new imageItem("img/" + "house" + "4.jpg");
+    imageArray[imageNum++]=new imageItem("img/" + "house" + "5.jpg");
+    totalImages = imageArray.length;
+})
+>>>>>>> f01e0952e7af2532295f7c92ea7af5aae3ec3fb0
 
 function imageItem(image_location) {
 	this.image_item=new Image();
 	this.image_item.src=image_location;
 }
 
-function get_ImageItemLocation(imageObj) {
-	return(imageObj.image_item.src)
+function getImageItemLocation(imageObj) {
+	return imageObj.image_item.src;
 }
 function randNum(x, y) {
     var range = y - x + 1;
     return Math.floor(Math.random() * range) + x;
 }
-var totalImages = imageArray.length;
 function getNextImage() {
     if (random_display) {
         imageNum = randNum(0, totalImages-1);
@@ -35,14 +51,14 @@ function getNextImage() {
     else {
         imageNum = (imageNum+1) % totalImages;
     }
-	var new_image = get_ImageItemLocation(imageArray[imageNum]);
-	return(new_image);
+	var new_image = getImageItemLocation(imageArray[imageNum]);
+	return new_image;
 }
 
 function getPrevImage() {
     imageNum = (imageNum-1) % totalImages;
-    var new_image = get_ImageItemLocation(imageArray[imageNum]);
-    return(new_image);
+    var new_image = getImageItemLocation(imageArray[imageNum]);
+    return new_image;
 }
 
 function prevImage(place) {
@@ -52,7 +68,17 @@ function prevImage(place) {
 
 function switchImage(place) {
     var new_image = getNextImage();
-    document[place].src = new_image;
+    doTransition(new_image,place);
     var recur_call = "switchImage('"+place+"')";
     timerID = setTimeout(recur_call, interval);
-    }
+}
+function doTransition(new_image,place) {
+    $('img[name=\"'+place+'\"]').animate({
+        opacity: 0
+    },1000,function() {
+        document[place].src = new_image;
+        $('img[name=\"'+place+'\"]').animate({
+            opacity: 1
+        },1000);
+    });
+}
