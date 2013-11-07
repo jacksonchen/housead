@@ -9,18 +9,6 @@ $(window).scroll(function(e){
     $('.fixedElement').css({'position': 'fixed', 'top': '0px'}); 
   } 
 });
-<<<<<<< HEAD
-
-var interval = 4500;
-var random_display=0;
-var imageNum=0;
-imageArray=new Array();
-imageArray[imageNum++]=new imageItem("img/house1.jpg");
-imageArray[imageNum++]=new imageItem("img/house4.jpg");
-imageArray[imageNum++]=new imageItem("img/house2.jpg");
-imageArray[imageNum++]=new imageItem("img/house3.jpg");
-imageArray[imageNum++]=new imageItem("img/house5.jpg");
-=======
 $(document).ready(function() {
     imageArray=[];
     imageArray[imageNum++]=new imageItem("img/" + "house" + "1.jpg");
@@ -30,15 +18,14 @@ $(document).ready(function() {
     imageArray[imageNum++]=new imageItem("img/" + "house" + "5.jpg");
     totalImages = imageArray.length;
 })
->>>>>>> f01e0952e7af2532295f7c92ea7af5aae3ec3fb0
 
 function imageItem(image_location) {
-	this.image_item=new Image();
-	this.image_item.src=image_location;
+    this.image_item=new Image();
+    this.image_item.src=image_location;
 }
 
 function getImageItemLocation(imageObj) {
-	return imageObj.image_item.src;
+    return imageObj.image_item.src;
 }
 function randNum(x, y) {
     var range = y - x + 1;
@@ -51,8 +38,8 @@ function getNextImage() {
     else {
         imageNum = (imageNum+1) % totalImages;
     }
-	var new_image = getImageItemLocation(imageArray[imageNum]);
-	return new_image;
+    var new_image = getImageItemLocation(imageArray[imageNum]);
+    return new_image;
 }
 
 function getPrevImage() {
