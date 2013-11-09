@@ -32,6 +32,13 @@
     <br />
 
     <div id="content">
+    	<div id="leftcol">
+        	<img name="slideImg" src="img/house1.jpg" width=500 height=375 border=0 />
+
+        	<div id="next" onClick="switchImage('slideImg'); clearTimeout(timerID)"></div>
+        	<div id="pause" onClick="clearTimeout(timerID)"></div>
+        	<div id="previous" onClick="prevImage('slideImg'); clearTimeout(timerID)"></div>
+        </div>
         <div id="rightcol">
             <div id="tabs">
                 <ul>
@@ -62,19 +69,10 @@
                 
             </div>
         </div>
-
-        <div class="verticalLine">
-        </div>
-
-        <img name="slideImg" src="img/house1.jpg" width=500 height=375 border=0 />
-
-        <div id="next" onClick="switchImage('slideImg'); clearTimeout(timerID)"></div>
-        <div id="pause" onClick="clearTimeout(timerID)"></div>
-        <div id="previous" onClick="prevImage('slideImg'); clearTimeout(timerID)"></div>
     </div>
 
     <footer>
-        <p>Contact (Realtor) for more details.</p>
+        <p>Contact Daphne Queen for more details.</p>
     </footer>
 </body>
 

@@ -9,7 +9,14 @@ $(window).scroll(function(e){
     $('.fixedElement').css({'position': 'fixed', 'top': '0px'}); 
   } 
 });
+
+$(window).resize(function() {
+$('#rightcol').width($(window).width()-$('#leftcol').width()-20);
+});
+
 $(document).ready(function() {
+$('#rightcol').width($(window).width()-$('#leftcol').width()-20);
+
     imageArray=[];
     imageArray[imageNum++]=new imageItem("img/" + "house" + "1.jpg");
     imageArray[imageNum++]=new imageItem("img/" + "house" + "2.jpg");
