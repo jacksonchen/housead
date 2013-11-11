@@ -90,10 +90,14 @@ img {
 margin-left:15px;
 }
 
+#leftcol {
+	float:left;
+	width:550px;
+}
+
 #rightcol {
-	position:absolute;
-	left:40%;
-	width:60%;
+	float:left;
+	width:40%;
 }
 
 #content {
@@ -136,9 +140,8 @@ footer:hover {
 footer p {
   padding:5px;
 }
-<<<<<<< HEAD
 
-.ui-corner-all, .ui-corner-top, .ui-corner-left, .ui-corner-tl {
+/*.ui-corner-all, .ui-corner-top, .ui-corner-left, .ui-corner-tl {
   border:0;
   margin-right:57.3%;
   padding:0;
@@ -148,14 +151,12 @@ footer p {
   width:200%;
   background-color: #f5f5dc;
 }
-=======
 .ui-tabs {
   background-color: #cccccc;
   border: 1px solid #003785;
-}
+}*/
 /*.ui-tabs-anchor {
   background-color:#5083CC;
   color:white;
   border-radius:3px;
 }*/
->>>>>>> f01e0952e7af2532295f7c92ea7af5aae3ec3fb0
