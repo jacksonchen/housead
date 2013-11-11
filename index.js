@@ -12,9 +12,17 @@ $(window).scroll(function(e){
 
 $(window).resize(function() {
 $('#rightcol').width($(window).width()-$('#leftcol').width()-20);
+$('#tabs-2').height(($(window).height()-$('footer').height()-$('#fixedElement').height())*.5);
+$('#tabs-3').height(($(window).height()-$('footer').height()-$('#fixedElement').height())*.5);
+$('#tabs-4').height(($(window).height()-$('footer').height()-$('#fixedElement').height())*.5);
+$('#tabs-5').height(($(window).height()-$('footer').height()-$('#fixedElement').height())*.5);
 });
 
 $(document).ready(function() {
+$('#tabs-2').height(($(window).height()-$('footer').height()-$('#fixedElement').height())*.5);
+$('#tabs-3').height(($(window).height()-$('footer').height()-$('#fixedElement').height())*.5);
+$('#tabs-4').height(($(window).height()-$('footer').height()-$('#fixedElement').height())*.5);
+$('#tabs-5').height(($(window).height()-$('footer').height()-$('#fixedElement').height())*.5);
 $('#rightcol').width($(window).width()-$('#leftcol').width()-20);
 
     imageArray=[];
