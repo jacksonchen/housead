@@ -28,11 +28,10 @@ $('#contenttabs').css('font-size', $(window).width()*.01);
 $('#rightcol').width($(window).width()-$('#leftcol').width()-20);
 
     imageArray=[];
-    imageArray[imageNum++]=new imageItem("img/" + "house" + "1.jpg");
-    imageArray[imageNum++]=new imageItem("img/" + "house" + "2.jpg");
-    imageArray[imageNum++]=new imageItem("img/" + "house" + "3.jpg");
-    imageArray[imageNum++]=new imageItem("img/" + "house" + "4.jpg");
-    imageArray[imageNum++]=new imageItem("img/" + "house" + "5.jpg");
+	for (var i=1; i<27; i++)
+	{
+    imageArray[imageNum++]=new imageItem("img/house" + i + ".jpg");
+	}
     totalImages = imageArray.length;
 })
 
@@ -79,7 +78,7 @@ function switchImage(place) {
 function doTransition(new_image,place) {
     $('img[name=\"'+place+'\"]').animate({
         opacity: 0
-    },250,function() {
+    },150,function() {
         document[place].src = new_image;
         $('img[name=\"'+place+'\"]').animate({
             opacity: 1
