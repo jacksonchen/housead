@@ -66,8 +66,8 @@ function getPrevImage() {
 }
 
 function prevImage(place) {
-    var new_image = getPrevImage();
-    document[place].src = new_image;
+	var new_image = getPrevImage();
+	doTransition(new_image,place);
 }
 
 function switchImage(place) {
@@ -79,7 +79,7 @@ function switchImage(place) {
 function doTransition(new_image,place) {
     $('img[name=\"'+place+'\"]').animate({
         opacity: 0
-    },1000,function() {
+    },250,function() {
         document[place].src = new_image;
         $('img[name=\"'+place+'\"]').animate({
             opacity: 1
