@@ -16,6 +16,7 @@ $('#tabs-2').height(($(window).height()-$('footer').height()-$('#fixedElement').
 $('#tabs-3').height(($(window).height()-$('footer').height()-$('#fixedElement').height())*.5);
 $('#tabs-4').height(($(window).height()-$('footer').height()-$('#fixedElement').height())*.5);
 $('#tabs-5').height(($(window).height()-$('footer').height()-$('#fixedElement').height())*.5);
+$('#contenttabs').css('font-size', $(window).width()*.01);
 });
 
 $(document).ready(function() {
@@ -23,6 +24,7 @@ $('#tabs-2').height(($(window).height()-$('footer').height()-$('#fixedElement').
 $('#tabs-3').height(($(window).height()-$('footer').height()-$('#fixedElement').height())*.5);
 $('#tabs-4').height(($(window).height()-$('footer').height()-$('#fixedElement').height())*.5);
 $('#tabs-5').height(($(window).height()-$('footer').height()-$('#fixedElement').height())*.5);
+$('#contenttabs').css('font-size', $(window).width()*.01);
 $('#rightcol').width($(window).width()-$('#leftcol').width()-20);
 
     imageArray=[];
