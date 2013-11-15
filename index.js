@@ -11,12 +11,18 @@ $(window).scroll(function(e){
 });
 
 $(window).resize(function() {
+if ($('img').width()>$('#leftcol').width()) {
+	$('#rightcol').width($(window).width()-$('img').width()-20);
+}
+else {
 $('#rightcol').width($(window).width()-$('#leftcol').width()-20);
+}
 $('#tabs-2').height(($(window).height()-$('footer').height()-$('#fixedElement').height())*.5);
 $('#tabs-3').height(($(window).height()-$('footer').height()-$('#fixedElement').height())*.5);
 $('#tabs-4').height(($(window).height()-$('footer').height()-$('#fixedElement').height())*.5);
 $('#tabs-5').height(($(window).height()-$('footer').height()-$('#fixedElement').height())*.5);
 $('#contenttabs').css('font-size', $(window).width()*.01);
+zoom();
 });
 
 $(document).ready(function() {
@@ -33,7 +39,9 @@ $('#rightcol').width($(window).width()-$('#leftcol').width()-20);
     imageArray[imageNum++]=new imageItem("img/house" + i + ".jpg");
 	}
     totalImages = imageArray.length;
-})
+	
+zoom();
+});
 
 function imageItem(image_location) {
     this.image_item=new Image();
@@ -84,4 +92,19 @@ function doTransition(new_image,place) {
             opacity: 1
         },1000);
     });
+}
+function zoom() {
+var screenCssPixelRatio = (window.outerWidth - 8) / window.innerWidth;
+if (screenCssPixelRatio < 1) {
+  zoomLevel = "-1";
+} else if (screenCssPixelRatio == 1) {
+  zoomLevel = "0";
+} else if (screenCssPixelRatio > 1) {
+  zoomLevel = "1";
+} else {
+  zoomLevel = "unknown";
+}
+if (zoomLevel > 0) {
+	$('#rightcol').width($(window).width()-$('#leftcol').width()-60);
+}
 }
